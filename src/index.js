@@ -5,23 +5,44 @@ import * as menu from "./menu.js"
 
 const content = document.getElementById("content");
 
-function loadImage(){
-  const img = document.createElement("img");
-  img.classList.add("img-background");   // Agrega clase
+const btnHome = document.getElementById("btnHome");
+const btnMenu = document.getElementById("btnMenu");
+const btnAbout = document.getElementById("btnAbout")
 
-  img.src = bgImage;
-  img.alt ="background image";
+function home(){
   content.innerHTML = "";
-  content.appendChild(img)
+  content.className = "";
+
+  content.classList.add("contentHome")
+
+  const discoverTxt = document.createElement("p");
+  discoverTxt.classList.add("discover");
+
+  const restName = document.createElement("p");
+  restName.classList.add("restName");
+
+  discoverTxt.textContent = "Discover";
+  restName.textContent = "nique.";
+
+  content.appendChild(discoverTxt);
+  content.appendChild(restName);
 }
 
+home();
+
+btnHome.addEventListener("click", () => {
+ home()
+});
+
+btnMenu.addEventListener("click", () => {
+  menu.menu();
+});
+
+btnAbout.addEventListener("click", () => {
+  alert("¡Información sobre nosotros!");
+});
 
 
 
-
-// const image = document.createElement("img");
-
-
-// document.body.appendChild(image);
 
 console.log("Hello World")
