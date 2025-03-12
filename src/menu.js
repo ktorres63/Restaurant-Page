@@ -1,6 +1,9 @@
 
 import noodleSoupImg from "./assets/noodleSoup.png";
 import pumpinkSoupImg from "./assets/pumpinkSoup.png";
+import tomatoToastImg from "./assets/tomatoToast.png";
+import appleBreeImg from "./assets/appleB.png";
+import pathouseTonicImg from "./assets/frenchmanD.png";
 
 
 
@@ -30,7 +33,7 @@ class Dish {
     descriptionElement.classList.add("dishDescription");
 
     const priceElement = document.createElement("p");
-    priceElement.textContent = `$${this.price}`;
+    priceElement.textContent = `$ ${this.price}`;
     priceElement.classList.add("dishPrice");
 
     dishContainer.appendChild(imgElement);
@@ -49,28 +52,57 @@ function menu() {
 
   content.classList.add("contentMenu");
 
-  const dinner = document.createElement("p");
-  dinner.classList.add("mealsName");
-  dinner.textContent = "Dinner";
+  const starters = document.createElement("p");
+  starters.classList.add("mealsName");
+  starters.textContent = "Starters";
 
-  const dish1 = new Dish(
+  const drinks = document.createElement("p");
+  drinks.classList.add("mealsName");
+  drinks.textContent = "Drinks";
+
+  const starter0 = new Dish(
+    "Tomato Toast",
+    tomatoToastImg,
+    "Crispy toasted bread topped with fresh tomatoes, olive oil, basil, and a touch of garlic.",
+    6.99
+  );
+
+  const starter1 = new Dish(
     "Noodle Soup",
     noodleSoupImg,
     "A comforting bowl of hot broth with tender noodles, fresh vegetables, and aromatic herbs.",
     9.99
   );
-  // const dish2 = new Dish(
-  //   "Pumpkin Soup",
-  //   pumpinkSoupImg,
-  //   "A creamy and rich pumpkin soup, seasoned with warm spices and served with a side of crispy bread.",
-  //   8.49
-  // );
+  const starter2 = new Dish(
+    "Pumpkin Soup",
+    pumpinkSoupImg,
+    "A creamy and rich pumpkin soup, seasoned with warm spices.",
+    8.49
+  );
 
-  content.appendChild(dinner)
-  content.appendChild(dish1.createElement());
-  // content.appendChild(dish2.createElement());
+
+  const drink0 = new Dish(
+    "Panthouse Tonic",
+    pathouseTonicImg,
+    "A refreshing blend of premium gin, tonic water, and a hint of citrus, served over ice.",
+    5.00
+  );
+
+  const drink1 = new Dish(
+    "Apple Breeze",
+    appleBreeImg,
+    "A crisp and fruity mix of apple juice, soda water, and a touch of mint for a refreshing taste",    
+    5.00
+  );
+
+
+  content.appendChild(starters)
+  content.appendChild(starter0.createElement());
+  content.appendChild(starter1.createElement());
+  content.appendChild(starter2.createElement());
+  content.appendChild(drinks)
+  content.appendChild(drink0.createElement());
+  content.appendChild(drink1.createElement());
 }
-
-
 
 export { menu };
