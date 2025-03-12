@@ -72,34 +72,39 @@ nav{
 /* Menu */
 .contentMenu{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background-color: black;
   border-radius: 1rem;
+  padding: 1.5rem;
 }
-
-
-.nameSection{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.paragraph1{
+.mealsName{
   font-size: 2.5rem;
   color: #FACE8D;
   font-family: "Tangerine", cursive;
   font-style: normal;
 }
 
-.paragraph2{
-  font-family: "Plus Jakarta Sans", sans-serif;
+.dish{
+  display:grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(2,1fr) ;
+  gap: 8px;
+  width: 40rem;
+}
+.dishImage{
+  grid-row: span 2;
+}
+.dishName{
   color: white;
-  font-size: 4rem;
-  font-weight: 500;
+}
+.dishDescription{
+  grid-column: 2/3;
+  color: white;
 }
 
-.contentHome{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.dishPrice{
+  grid-row-start: 1;
+  grid-column-start: 3;
+
+  color:white;
 }
