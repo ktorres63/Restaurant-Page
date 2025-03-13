@@ -33,17 +33,32 @@ body::before {
 
 nav{
   position: absolute;
-  bottom: 3rem;
+  bottom: 2rem;
   left: 50%;
   transform: translateX(-50%); 
   display:flex;
-  height: 2rem;
+  height: 2.5rem;
+  width: 14rem;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
-  width: 12rem;
+  gap: 1rem;
   background-color: white;
   border-radius: 1rem;
+}
+
+button{
+  font-family: "Plus Jakarta Sans", sans-serif;
+  border-radius:1rem;
+  padding: 10px;
+  border: none;
+  background-color: white;
+}
+
+button:hover{
+  background-color: black;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
 }
 
 /* Home */
@@ -120,7 +135,24 @@ nav{
   grid-row-start: 1;
   grid-column-start: 3;
   align-self: self-end;
-
-
   color:white;
+}
+
+/* Contact */
+.contentContact{
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  /* background-color: black; */
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: 40rem;
+}
+.textAboutUs{
+  color: white;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.imgArch{
+  width:96%;
+  align-self: center;
 }

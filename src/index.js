@@ -39,7 +39,7 @@ btnMenu.addEventListener("click", () => {
 });
 
 btnAbout.addEventListener("click", () => {
-  alert("¡Información sobre nosotros!");
+  contact.contact();
 });
 
 
